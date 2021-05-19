@@ -8,7 +8,7 @@ const saltRounds = 10;
 const jwt = require("jsonwebtoken");
 const { verify } = require("jsonwebtoken");
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({ extended: true }));
